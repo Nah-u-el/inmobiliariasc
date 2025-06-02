@@ -265,6 +265,14 @@ function ajustarMonto() {
     }
 }
 
+</script>
+<script>
+    function mostrarCajaMensual() {
+        window.location.href = 'caja_mensual.php';
+    }
+</script>
+
+
 
     
     

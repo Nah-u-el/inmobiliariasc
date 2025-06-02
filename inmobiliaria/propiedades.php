@@ -57,6 +57,8 @@
             <button type="button" class="btn btn-success alta-cliente" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Agregar Propiedad
             </button>
+            
+            <button type="button" class="btn btn-success alta-cliente" data-bs-toggle="modal" data-bs-target="#modalContrato">Agregar Contrato</button>
           
           <input type="text" id="searchInput" placeholder="Buscar" class="search">
           <!-- VER LOS CLIENTES DESACTIVADOS
@@ -96,8 +98,7 @@ if (mysqli_num_rows($result) > 0) {
                 <td>' . $fila['Ciudad'] . '</td>
                 <td>' . $fila['Barrio'] . '</td>
                 <td>
-                    
-                    <a href="#">Agregar Inquilino</a>
+                    <a href="ver_contrato.php?id=' .$fila['PropiedadID'] . '">VER CONTRATO</a>
                     
                     <a href="ver_propiedad.php?id=' . $fila['PropiedadID'] . '">Ver Propiedad</a>
                 </td>
@@ -209,6 +210,75 @@ mysqli_close($conn);
        
     </script>
     <!-- Fin Modal-->
+    
+    <!-- Modal Contrato -->
+<div class="modal fade" id="modalContrato" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <form action="guardar_contrato.php" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nuevo Contrato</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Selección de propiedad -->
+        <div class="mb-3">
+          <label>Propiedad</label>
+          <select name="PropiedadID" class="form-control" required>
+            <?php
+            include 'conexion.php';
+            $propiedades = mysqli_query($conn, "SELECT * FROM propiedades");
+            while ($row = mysqli_fetch_assoc($propiedades)) {
+              echo "<option value='{$row['PropiedadID']}'>{$row['Direccion']} - {$row['Ciudad']}</option>";
+            }
+            ?>
+          </select>
+        </div>
+        
+        <div class="mb-3">
+         <label>Cuota Mensual</label>
+          <input type="number" step="0.01" name="CanonMensual" placeholder="Cuota Mensual" class="form-control mb-2" required>
+        </div>
+        <div class="mb-3">
+        <label>Depósito</label>
+        <input type="number" step="0.01" name="Deposito" placeholder="Deposito inicial" class="form-control mb-2" required>
+        </div>
+
+        <!-- Inquilino -->
+        <h6>Inquilino</h6>
+        <input type="text" name="InquilinoNombre" placeholder="Nombre" class="form-control mb-2" required>
+        <input type="text" name="InquilinoDNI" placeholder="DNI" class="form-control mb-2" required>
+        <input type="text" name="InquilinoTelefono" placeholder="Teléfono" class="form-control mb-2">
+        <input type="email" name="InquilinoMail" placeholder="Email" class="form-control mb-2">
+
+        <!-- Garantes -->
+        <h6>Garante 1</h6>
+        <input type="text" name="Garante1Nombre" placeholder="Nombre" class="form-control mb-2" required>
+        <input type="text" name="Garante1DNI" placeholder="DNI" class="form-control mb-2" required>
+
+        <h6>Garante 2</h6>
+        <input type="text" name="Garante2Nombre" placeholder="Nombre" class="form-control mb-2" required>
+        <input type="text" name="Garante2DNI" placeholder="DNI" class="form-control mb-2" required>
+
+        <!-- Fechas del contrato -->
+        <div class="row">
+          <div class="col">
+            <label>Fecha Inicio</label>
+            <input type="date" name="FechaInicio" class="form-control" required>
+          </div>
+          <div class="col">
+            <label>Fecha Fin</label>
+            <input type="date" name="FechaFin" class="form-control" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Guardar Contrato</button>
+      </div>
+    </form>
+  </div>
+</div>
     
     <!-- Buscador -->
     
