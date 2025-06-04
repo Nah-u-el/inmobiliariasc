@@ -48,10 +48,10 @@
     </div>
         <nav>
             <ul>
-                <li><a href="clientes.php">👥 Clientes</a></li>
-                <li><a href="propietarios.php">👤 Propietarios</a></li>
-                <li><a href="propiedades.php">🏢 Propiedades</a></li>
-                <li><a href="contabilidad.php">💲 Contabilidad</a></li>
+                <li><a href="clientes.php"><i class="fas fa-users"></i> Clientes</a></li>
+                <li><a href="propietarios.php"><i class="fas fa-user-tie"></i> Propietarios</a></li>
+                <li><a href="propiedades.php"><i class="fas fa-home"></i> Propiedades</a></li>
+                <li><a href="contabilidad.php" class="active"><i class="fas fa-file-invoice-dollar"></i> Contabilidad</a></li>
 
             </ul>
         </nav>
