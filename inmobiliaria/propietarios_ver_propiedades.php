@@ -53,7 +53,7 @@
         </nav>
     </header>
     <main>
-        
+        <a href="propietarios.php">Volver</a>
         
     <?php
 include 'conexion.php';

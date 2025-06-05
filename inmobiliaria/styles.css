@@ -136,53 +136,57 @@ td button {
 }
 
 .input{
-width: 50%;
-margin-left: 40px;
+    width: 50%;
+    margin-left: 40px;
 }
 .button-section {
-            background-color: #686868;
-            padding: 5px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 40px; /* Ancho para el contenedor de botones */
-            text-align: center;
-        }
+    background-color: #686868;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 40px; /* Ancho para el contenedor de botones */
+    text-align: center;
+}
 
-        h2 {
-            color: #333;
-            margin-bottom: 25px;
-        }
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
 
-        .button-group {
-            display: flex;
-            flex-direction: column; /* Apila los botones verticalmente */
-            gap: 15px; /* Espacio entre los botones */
-            padding: 0 20px; /* Espacio lateral para que no se peguen a los bordes */
-        }
+.button-group {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 15px; /* Espacio entre los botones */
+    padding: 0 20px; /* Espacio lateral para que no se peguen a los bordes */
+}
 
-        .action-button {
-            background-color: #343a40; /* Gris muy oscuro, casi negro */
-            color: white;
-            border: none;
-            padding: 3px 10px;
-            border-radius: 5px;
-            font-size: 1.1em; /* Un poco más grande para ser prominente */
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: flex; /* Para alinear icono y texto */
-            align-items: center;
-            justify-content: center; /* Centra el contenido del botón */
-            text-decoration: none; /* En caso de usar <a> */
-            width: 45%; /* Ocupa todo el ancho disponible */
-            box-sizing: border-box; /* Incluye padding y border en el ancho */
-        }
+.action-button {
+    background-color: #343a40; /* Gris muy oscuro, casi negro */
+    color: white;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 1.1em; /* Un poco más grande para ser prominente */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
+    justify-content: center; /* Centra el contenido del botón */
+    text-decoration: none; /* En caso de usar <a> */
+    width: 45%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
 
-        .action-button:hover {
-            background-color: #23272b; /* Un poco más oscuro al pasar el ratón */
-            transform: translateY(-2px); /* Pequeño efecto al pasar el ratón */
-        }
+.action-button:hover {
+    background-color: #23272b; /* Un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto al pasar el ratón */
+}
 
-        .action-button i {
-            margin-right: 10px; /* Espacio entre el icono y el texto */
-            font-size: 1.3em; /* Tamaño del icono */
-        }
+.action-button i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 1.3em; /* Tamaño del icono */
+}
+
+.h5{
+    background-color: #00c50a;
+}

@@ -2,7 +2,7 @@
 include 'conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $caja_id = $_POST['caja_id'];
+    $caja_id = $_POST['CajaID'];
     $fecha = $_POST['Fecha'];
     $concepto = $_POST['Concepto'];
     $monto = $_POST['Monto'];
