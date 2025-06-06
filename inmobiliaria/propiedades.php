@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // Muestra mensajes de sesión (alertas) si existen
 if (isset($_SESSION['mensaje'])) {
     echo "<script>alert('" . $_SESSION['mensaje'] . "');</script>";
@@ -314,7 +315,7 @@ if ($conn->connect_error) {
             console.log("jQuery y DataTables listos.");
             $('#propiedadesTable').DataTable({
                 "language": {
-                    "url": "//cdn.datatables.net/plug-ins/2.0.0/i18n/es-ES.json" // URL correcta para DataTables 2.x
+                    "url": "https://cdn.datatables.net/plug-ins/2.0.2/i18n/es-ES.json" // URL correcta para DataTables 2.x
                 },
                 "paging": true,      // Habilita paginación
                 "searching": true,   // Habilita el cuadro de búsqueda

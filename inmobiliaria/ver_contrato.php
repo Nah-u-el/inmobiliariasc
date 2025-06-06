@@ -44,9 +44,9 @@
     </div>
         <nav>
             <ul>
-                <li><a href="clientes.php" class="active"><i class="fas fa-users"></i> Clientes</a></li>
+                <li><a href="clientes.php" ><i class="fas fa-users"></i> Clientes</a></li>
                 <li><a href="propietarios.php"><i class="fas fa-user-tie"></i> Propietarios</a></li>
-                <li><a href="propiedades.php"><i class="fas fa-home"></i> Propiedades</a></li>
+                <li><a href="propiedades.php" class="active"><i class="fas fa-home"></i> Propiedades</a></li>
                 <li><a href="contabilidad.php"><i class="fas fa-file-invoice-dollar"></i> Contabilidad</a></li>
             </ul>
         </nav>
@@ -54,7 +54,7 @@
     
        <div class="container mt-4">
             <a href="propiedades.php" class="btn text-white" style="background-color: rgba(233, 128, 0, 0.92);">
-                ← Volver a Propiedades
+                <i class="fas fa-arrow-left"></i> Volver a Propiedades
             </a>
         </div>
     
